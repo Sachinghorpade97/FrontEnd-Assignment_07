@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Assignment-7</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(150 94 255);
+        }
+
+        .container {
+            margin-top: 10%;
+            background-color: white;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #shppng {
+                padding: 0% !important;
+            }
+        }
+
+        /*   #flexCheckChecked {
+            border-radius: 5%;
+        } */
+
+        #flexCheckDefault {
+            background-color: white;
+            border-color: rgb(150 94 255);
+            color: rgb(150 94 255);
+            border-radius: 5%;
+            box-shadow: none;
+        }
+
+        #inputAddress::placeholder,
+        #inputCity::placeholder,
+        #inputName4::placeholder,
+        #inputEmail4::placeholder,
+        #inputLname4::placeholder {
+            color: black;
+        }
+
+        #autoSizingInputGroup::placeholder {
+            color: rgb(150 94 255);
+        }
+
+        #phoneno {
+            box-shadow: 0px 0px 0px 4px rgb(150 94 255);
+        }
+
+
+
+
+        .checkbox-button__input {
+            opacity: 0;
+            position: absolute;
+            margin-top: -5px;
+        }
+
+        .checkbox-button__control {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            vertical-align: middle;
+            background-color: inherit;
+            color: rgb(114, 114, 114);
+            border: 2px solid rgb(46, 46, 46);
+        }
+
+        .checkbox-button__input:checked+.checkbox-button__control:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(150 94 255);
+        }
+
+        /*  .checkbox-button__input:checked+.checkbox-button__control {
+            border-color: rgb(37, 37, 37);
+        } */
+
+        .checkbox-button__control {
+            transform: scale(0.75);
+        }
+
+        .form {
+            margin-left: -3%;
+        }
+
+        img {
+            margin-top: 5px;
+        }
+
+        .container {
+            box-shadow: 0px 15px 30px 0px rgb(0, 0, 0);
+        }
+    </style><!--  shadow-lg p-3 mb-5 bg-body rounded -->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="row mt-3 mb-4">
+                    <div class="col-md-4"> <b style="color: rgb(150 94 255); font-size: 25px;" class="p-3">
+                            SHPPNG</b>
+                    </div>
+                    <div class="col-md-8">
+                        <span class="text-center;">
+                            <b class="text-muted" style="color: rgb(107, 40, 40);">Shopping Bag <i class="fa fa-caret-right"></i>&nbsp;&nbsp;</b>
+                            <b style="color:rgb(150 94 255);" class="text-center">Checkout <i
+                                    class="fa fa-caret-right"></i></b>
+                            <b class="text-muted text-center">&nbsp;Confirmation</b><img src="./cart.jpg"
+                                style="float:right;" />
+                        </span><br>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+
+
+            <div class="col">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Personal information</h5>
+
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputName4 text-muted" class="form-label  text-muted">First Name</label>
+                                <input type="text" class="form-control" id="inputName4" placeholder="Adrien">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputLname4" class="form-label  text-muted">Last Name</label>
+                                <input type="text" class="form-control" id="inputLname4" placeholder="Gervaix">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="inputEmail4 " class="form-label text-muted">Email</label>
+                                <input type="email" class="form-control" placeholder="adrien.gervaix@gmail.com"
+                                    id="inputEmail4">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress " class="form-label text-muted">Street</label>
+                                <input type="text" class="form-control" id="inputAddress"
+                                    placeholder="284,Place de la bourse">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label text-muted">City</label>
+                                <input type="text" class="form-control" id="inputCity" placeholder="Lille">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCountry" class="form-label text-muted">Country</label>
+                                <select id="inputCountry" class="form-select">
+                                    <option selected>France</option>
+                                    <option>Ind</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="inputZip" class="form-label  text-muted">Phone number</label>
+                                <div class="input-group " id="phoneno" style="border:rgb(150 94 255);;">
+                                    <div class="input-group-text text-muted">+33</div>
+                                    <input type="text" style="box-shadow: none; color: rgb(150 94 255);"
+                                        class="form-control" id="autoSizingInputGroup" placeholder="612 34 56 78">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card  ">
+
+                    <div class="card-body">
+                        <h5 class="card-title  text-center mb-3">Delivery</h5>
+
+                        <h6 class="text-muted">Delivery fee</h6>
+                        <form class="row g-3">
+
+                            <div class="col-md-6">
+                                <div class="card" style="width: auto;">
+                                    <div class="card-body">
+                                        <h2 class="card-title text-center" style="color: rgb(150 94 255);">
+                                            <b>0 <sup>$</sup></b>
+                                        </h2>
+                                        <h6 class="card-title text-center text-muted">
+                                            3-4 Weeks</b>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card" style="width: auto; background-color:rgb(150 94 255);">
+                                    <div class="card-body">
+                                        <h2 class="card-title text-center" style="color: white; ">
+                                            <b>5 <sup>$</sup></b>
+                                        </h2>
+                                        <h6 class="card-title text-center" style="color: rgb(52, 7, 93); ">
+                                            2-5 Days
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <p class="card-title text-muted" style="font-size: 15px;">
+                                    Estimated delivery date <b>August 4th.</b>
+                                </p>
+                                <p class="card-title text-muted" style="font-size: 15px;">
+                                    Every package has a tracking number.
+                                </p>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="col-12 mt-5">
+                    <div class="form">
+                        <div class="form-check ">
+                            <label class="checkbox-button">
+                                <input type="radio" class="checkbox-button__input ml--5" id="choice1-1" name="choice1"
+                                    checked>
+                                <span class="checkbox-button__control"></span>
+                                <span class="checkbox-button__label text-muted"> Subscribe to our Newslater</span>
+                            </label>
+                        </div>
+                        <div class="form-check mb-4">
+                            <label class="checkbox-button">
+                                <input type="radio" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                <span class="checkbox-button__control"></span>
+                                <span class="checkbox-button__label text-muted"> Creating an account</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn " style="background-color:rgb(150 94 255);height: 80px; color: white;"
+                            type="button">Confirm my
+                            order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--   <div class="form-check">
+                        <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Subscribe to our Newslater
+                        </label>
+
+
+                    </div> -->
+    <!-- <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Creating an account
+
+                        </label>
+                    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+<!--  <svg xmlns="http://www.w3.org/2000/svg" height="20px" 
+                                viewBox="0 0 576 512"> -->
+<!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+<!-- <path
+                                    d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z" />
+                            </svg>
+</html> -->
